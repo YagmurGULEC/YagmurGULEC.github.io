@@ -1,7 +1,14 @@
 html, body{
-	font-size:16px;
-	color: #dfdfdf;
-	background-color: #063647; 
+	background: url("mink-mingle-AlEyuIKuSmc-unsplash.jpg"); /* Links to your background image, which you can also replace with a URL. */
+	background-size: cover; /* Image covers page. */
+	background-repeat: no-repeat; /* Image does not repeat. */
+	background-attachment: fixed; /* Image doesn't move when you scroll up or down. */
+	background-position: top;
+	text-align: left;
+	color: black; /* Text color. */
+	
+        font-size: 25px;
+        font-weight: bold;
 }
 
 a {
@@ -15,18 +22,20 @@ a:hover {
 section{
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+       
 }
 
 .section-1 {
-	background: #063647;
+	
+       background: url(""); 
 }
 
 .section-2 {
-	background-color: #052D3D;
+	background: url("");
 }
 
 .section-3 {
-	background-color: #0E282E;
+	background: url("");
 }
 
 .section-4 {
@@ -35,11 +44,11 @@ section{
 }
 
 a.nav-item {
-	color: #dfdfdf;
+	color: black;
 }
 
 a.nav-item:hover {
-	color: #fff;
+	color: black;
 }
 
 .avatar{
@@ -73,7 +82,7 @@ a.nav-item:hover {
 }
 
 .title {
-	color: #fff;
+	color: black;
 	text-align: left;
 	margin-bottom: 2rem;
 }
