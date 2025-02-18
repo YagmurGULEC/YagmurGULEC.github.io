@@ -32,7 +32,7 @@ const Language: React.FC<TimelineProps> = ({ language }) => {
             <div className="container text-center">
                 <div className="row justify-content-center">
                     {Object.entries(content[language])
-                        .filter(([_, level]) => level) // Remove empty values
+                        .filter(([_, level]) => Boolean(level)) // Use `_` instead of `lang`
                         .map(([lang, level], index) => (
                             <div key={index} className="col-md-4 my-2">
                                 <div className="border rounded p-3 bg-light">

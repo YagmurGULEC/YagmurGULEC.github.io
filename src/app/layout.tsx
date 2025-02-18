@@ -7,7 +7,7 @@ import "./globals.css"; // Ensure this is imported
 // import { Inter, Poppins } from "next/font/google";
 import { LanguageProvider } from "./components/LanguageContext";
 
-import React, { useState, ReactNode, useEffect } from "react";
+import React, { useState, ReactNode } from "react";
 import Navbar from "./components/Navbar";
 import BootstrapClient from "./components/BootstrapClient";
 

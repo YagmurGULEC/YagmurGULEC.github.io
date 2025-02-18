@@ -1,16 +1,23 @@
 "use client";
-import Image from "next/image";
 import About from "./components/About";
 import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
 import Education from "./components/Education";
 import Language from "./components/Language";
-import { use, useEffect } from "react";
+
 import { useLanguage } from "./components/LanguageContext"; // ✅ Import Context
 
-type Content = {
-  [key: string]: any
+type ContentType = {
+  title: string;
+  text: string;
+  cv: string;
 };
+
+type Content = {
+  en: ContentType;
+  fr: ContentType;
+};
+
 
 const content: Content = {
 

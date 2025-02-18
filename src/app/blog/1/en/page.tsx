@@ -1,5 +1,5 @@
 import React from "react";
-import CodeBlock from "../../../components/CodeBlock"; // ✅ Import the component
+
 
 export default function BlogPost() {
     return (

@@ -3,10 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "./LanguageContext"; // ✅ Import Context
-type NavbarProps = {
-    language: string;
-    setLanguage: (lang: string) => void;
-};
 
 export default function Navbar() {
     const { language, setLanguage } = useLanguage(); // ✅ Get language state

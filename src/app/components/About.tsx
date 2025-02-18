@@ -1,9 +1,16 @@
-import React, { Key, useState } from "react";
+
 import Image from "next/image";
 
+type ContentType = {
+    [language: string]: {
+        title: string;
+        text: string;
+        cv: string;
+    };
+};
 
-export default function About({ language, content }: { language: string, content: any }) {
 
+export default function About({ language, content }: { language: string, content: ContentType }) {
 
     return (
 
