@@ -8,8 +8,8 @@ type TimelineProps = {
 const Timeline: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
     const timelineData = [
         {
-            startDate: "",
-            endDate: "2024-03",
+            startDate: "2024-03",
+            endDate: "",
             en: {
                 title: "Software Developer Intern", company: "Riipen Level UP and Beyond the Cloud",
                 link: "https://levelup.riipen.com/users/EzvbrEYz",
