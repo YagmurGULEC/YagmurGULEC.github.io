@@ -11,7 +11,11 @@ export default function BlogPage() {
                 "title": "Version Control with Git Atlassian University (Coursera) Labs",
                 "date": "February 17, 2025",
             },
-
+            {
+                "blogId": 2,
+                "title": "Spring IoC & Dependency Injection: A Beginner’s Guide with Diagrams",
+                "date": "February 19, 2025",
+            },
 
         ]
 

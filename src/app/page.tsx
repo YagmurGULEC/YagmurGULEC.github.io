@@ -57,7 +57,7 @@ export default function Home() {
       <Education language={language as "en" | "fr"} getMonthYear={getMonthYear} />
       <Language language={language as "en" | "fr"} />
 
-      <Footer />
+
     </>
   );
 
