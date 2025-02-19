@@ -35,6 +35,11 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link fw-bold text-white" href="#projects">
+                                {language === "en" ? "Projects" : "Projets"}
+                            </Link>
+                        </li>
+                        <li className="nav-item">
                             <Link className="nav-link fw-bold text-white" href="#education">
                                 {language === "en" ? "Education" : "Formation"}
                             </Link>
