@@ -71,7 +71,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
 
-
+```
 ## 🚀 Running Locally
 
 To run this Next.js portfolio on your local machine, follow these steps:
@@ -82,4 +82,5 @@ git clone https://github.com/YagmurGULEC/YagmurGULEC.github.io.git
 cd YagmurGULEC.github.io
 npm install  # or yarn install
 npm run dev  # or yarn dev
-        
+```
+

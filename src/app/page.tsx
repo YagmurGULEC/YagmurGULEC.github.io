@@ -23,14 +23,14 @@ const content: Content = {
 
   en: {
     title: "Hello, I am Yagmur",
-    text: "Passionate about building scalable and efficient software solutions, I am eager to transition into my first full-time software development role. Through multiple internships and hands-on projects, I have gained practical experience in backend development, cloud computing, working with technologies such as FastAPI, AWS, Docker, JavaScript. I thrive in dynamic environments where I can tackle complex challenges, collaborate with teams, and continuously expand my technical expertise. Excited to contribute my problem-solving skills and innovative mindset to a forward-thinking company while continuing to grow as a developer.",
-    cv: "https://docs.google.com/document/d/1wbjZEvDCygx5BQ33yqTWvJzk4juyBb0zZKWQabrRaRI/edit?usp=sharing",
+    text: "With a background in numerical modeling from academic research, I transitioned to software development, earning a Master's degree in computer science. I have gained hands-on experience across diverse projects and technologies. A quick learner with strong adaptability, I continuously expand my knowledge through online courses. Passionate about solving complex problems, optimizing performance, and building scalable applications, with a strong interest in continuous deployment and automation.",
+    cv: "https://docs.google.com/document/d/e/2PACX-1vRjjEJVecE5U6Pbt4oiWG6Iz6bcrhsTfViALk3FbB0cw5p3qZa-yJbmF5MaYOA6XQ/pub",
 
   },
   fr: {
     title: "Bonjour, je suis Yagmur",
-    text: "Developpeuse de logiciels",
-    cv: "https://docs.google.com/document/d/1STDxlTUh4cU33yqHdcd_9m06hhvZ-F42LnmOTxBudoE/edit?usp=sharing"
+    text: "Avec une expérience en modélisation numérique issue de la recherche académique, j’ai effectué une transition vers le développement logiciel en obtenant une maîtrise en informatique. J’ai acquis une expérience pratique sur divers projets et technologies. Apprenante rapide avec une grande capacité d’adaptation, j’élargis continuellement mes connaissances à travers des formations en ligne. Passionnée par la résolution de problèmes complexes, l’optimisation des performances et le développement d’applications évolutives, j’ai un intérêt marqué pour le déploiement continu et l’automatisation.",
+    cv: "https://docs.google.com/document/d/e/2PACX-1vTJIMvVT92ski4Vjt7QjbRKl6oQZc3aOCo3h-IoliGU-4QQg_jCdMHlwaNZIZDy9Q/pub"
   }
 };
 

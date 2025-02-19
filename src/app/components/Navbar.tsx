@@ -10,24 +10,8 @@ export default function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container px-5">
                 <div className="d-flex justify-content-center gap-3">
-                    {/* <h1 className="navbar-brand py-2">Yagmur GULEC</h1> */}
-                    {/* Email */}
-                    {/* <a className="fs-2 link-light" href="mailto:yagmurgulec89@gmail.com">
-                        <i className="bi bi-envelope"></i>
-                    </a> */}
-                    <a className="py-2 fw-bold text-white" href="mailto:yagmurgulec89@gmail.com">
-                        yagmurgulec89@gmail.com
-                    </a>
+                    <h1 className="navbar-brand py-2">Yagmur GULEC</h1>
 
-
-                    <a className="fs-2 link-light" href="https://github.com/YagmurGULEC" target="_blank">
-                        <i className="bi bi-github"></i>
-                    </a>
-
-                    {/* LinkedIn */}
-                    <a className="fs-2 link-light" href="https://linkedin.com/in/yagmur-gulec/" target="_blank">
-                        <i className="bi bi-linkedin"></i>
-                    </a>
                 </div>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"

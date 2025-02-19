@@ -23,13 +23,13 @@ const Education: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
             en: {
                 university: "Bishop's University, Sherbrooke, Quebec",
                 degree: "Master of Science in Computer Science",
-                skills: ["Python", "Deep Learning", "Image Processing", "Machine Learning", "Data Structures and Algorithms"]
+                skills: ["Database Design (SQL)", "Machine Learning", "Data Visualization", "Deep Learning"]
 
             },
             fr: {
-                university: "Université de Bishop, Sherbrooke, Québec",
-                degree: "Maîtrise en Informatiques",
-                skills: ["Python", "Deep Learning", "Image Processing", "Machine Learning"]
+                university: "Université de Bishop's, Sherbrooke, Québec",
+                degree: "Maîtrise en Informatique",
+                skills: ["Conception de bases de données (SQL)", "Apprentissage automatique", "Visualisation des données", "Apprentissage profond"]
 
             }
         },
