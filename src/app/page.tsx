@@ -4,6 +4,7 @@ import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
 import Education from "./components/Education";
 import Language from "./components/Language";
+import Projects from "./components/Projects";
 
 import { useLanguage } from "./components/LanguageContext"; // ✅ Import Context
 
@@ -52,8 +53,10 @@ export default function Home() {
 
     <><About language={language} content={content} />
       <Timeline language={language as "en" | "fr"} getMonthYear={getMonthYear} />
+      <Projects language={language as "en" | "fr"} />
       <Education language={language as "en" | "fr"} getMonthYear={getMonthYear} />
       <Language language={language as "en" | "fr"} />
+
       <Footer />
     </>
   );
