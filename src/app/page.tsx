@@ -25,13 +25,14 @@ const content: Content = {
   en: {
     title: "Hello, I am Yagmur",
     text: "With a background in numerical modeling from academic research, I transitioned to software development, earning a Master's degree in computer science. I have gained hands-on experience across diverse projects and technologies. A quick learner with strong adaptability, I continuously expand my knowledge through online courses. Passionate about solving complex problems, optimizing performance, and building scalable applications, with a strong interest in continuous deployment and automation.",
-    cv: "https://docs.google.com/document/d/e/2PACX-1vRjjEJVecE5U6Pbt4oiWG6Iz6bcrhsTfViALk3FbB0cw5p3qZa-yJbmF5MaYOA6XQ/pub",
+    cv: "/CV.pdf",
 
   },
   fr: {
     title: "Bonjour, je suis Yagmur",
     text: "Avec une expérience en modélisation numérique issue de la recherche académique, j’ai effectué une transition vers le développement logiciel en obtenant une maîtrise en informatique. J’ai acquis une expérience pratique sur divers projets et technologies. Apprenante rapide avec une grande capacité d’adaptation, j’élargis continuellement mes connaissances à travers des formations en ligne. Passionnée par la résolution de problèmes complexes, l’optimisation des performances et le développement d’applications évolutives, j’ai un intérêt marqué pour le déploiement continu et l’automatisation.",
-    cv: "https://docs.google.com/document/d/e/2PACX-1vTJIMvVT92ski4Vjt7QjbRKl6oQZc3aOCo3h-IoliGU-4QQg_jCdMHlwaNZIZDy9Q/pub"
+    // cv: "https://docs.google.com/document/d/e/2PACX-1vTJIMvVT92ski4Vjt7QjbRKl6oQZc3aOCo3h-IoliGU-4QQg_jCdMHlwaNZIZDy9Q/pub"
+    cv: "/CV.pdf",
   }
 };
 

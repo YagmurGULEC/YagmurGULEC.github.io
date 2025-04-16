@@ -1,23 +1,47 @@
 import React from "react";
 
+
+type Project = {
+    title: string;
+    link?: string;
+    skills?: string[];
+};
+
+type JobItem = {
+    startDate: string;
+    endDate: string;
+    en: {
+        title: string;
+        company: string;
+        link?: string;
+        projects: Project[];
+    };
+    fr: {
+        title: string;
+        company: string;
+        link?: string;
+        projects: Project[];
+    };
+};
 type TimelineProps = {
     language: "en" | "fr";
     getMonthYear: (date: string, language: "en" | "fr") => string;
-};
 
+};
 const Timeline: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
-    const timelineData = [
+    const timelineData: JobItem[] = [
         {
             startDate: "2024-03",
-            endDate: "",
+            endDate: "2025-03",
             en: {
                 title: "Software Developer Intern", company: "Riipen Level UP and Beyond the Cloud",
                 link: "https://levelup.riipen.com/users/EzvbrEYz",
 
                 projects: [
                     {
-                        title: "Designing an efficient and cost-effective AWS cloud architecture strategy (map) for Hinna's micro-services",
-                        skills: ["AWS", "Java", "Spring Boot", "PostgreSQL", "Docker", "Collaboaration", "Agile"]
+                        title: "Automation of provisioning a Jenkins server running on an EC2 instance with Terraform",
+                        link: "https://docs.google.com/document/d/1jXBt_hFFoUZ1Ixxpdd6RL2nK-A_Paij-WD_h2agTlSU/edit?usp=sharing",
+                        skills: ["AWS EC2", "Bash Script", "Ngnix", "Terraform", "Jenkins", "Infrastructure as Code (IaC)"]
                     },
                     {
                         title: "Developed a full-stack interactive dashboard for analysis of prediction market data and deployed on AWS Lambda",
@@ -42,8 +66,9 @@ const Timeline: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
                 link: "https://levelup.riipen.com/users/EzvbrEYz",
                 projects: [
                     {
-                        title: "Designing an efficient and cost-effective AWS cloud architecture strategy (map) for Hinna's micro-services",
-                        skills: ["AWS", "Java", "Spring Boot", "PostgreSQL", "Docker", "Collaboaration", "Agile"]
+                        title: "Automation of provisioning a Jenkins server running on an EC2 instance with Terraform",
+                        link: "https://docs.google.com/document/d/1jXBt_hFFoUZ1Ixxpdd6RL2nK-A_Paij-WD_h2agTlSU/edit?usp=sharing",
+                        skills: ["AWS EC2", "Bash Script", "Ngnix", "Terraform", "Jenkins", "Infrastructure as Code (IaC)"]
                     },
                     {
                         title: "Developed a full-stack interactive dashboard for analysis of prediction market data and deployed on AWS Lambda",
@@ -184,7 +209,8 @@ const Timeline: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
                                         {item[language]?.projects &&
                                             item[language].projects.map((project, idx) => (
                                                 <React.Fragment key={idx}>
-                                                    <li className="text-bold mt-3">{project.title}</li>
+                                                    <li className="text-bold mt-3">{project.title}   {project.link && <a className="btn btn-success" href={project.link}>Google Docs</a>}</li>
+
                                                     {project.skills?.map((skill, skillIndex) => (
                                                         <a className="badge mx-2 bg-dark text-decoration-none link-light" href="#!" key={skillIndex}>
                                                             {skill}
