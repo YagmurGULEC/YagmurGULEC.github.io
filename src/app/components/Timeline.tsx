@@ -31,6 +31,30 @@ type TimelineProps = {
 const Timeline: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
     const timelineData: JobItem[] = [
         {
+            startDate: "2024-05",
+            endDate: "Present",
+            en: {
+                title: "Machine Learning Developer Intern", company: "M2M",
+
+                projects: [
+                    {
+                        title: "Implementing data augmentation techniques for a large-scale dataset of images to improve the performance of a deep learning model for Yolo Object Detection",
+                        skills: ["Python", "Deep Learning", "PyTorch", "Data Augmentation"],
+                    },
+                ]
+            },
+            fr: {
+                title: "Machine Learning Developer Intern", company: "M2M",
+                projects: [
+                    {
+                        title: "Implementing data augmentation techniques for a large-scale dataset of images to improve the performance of a deep learning model for Yolo Object Detection",
+                        skills: ["Python", "Deep Learning", "PyTorch", "Data Augmentation"],
+                    },
+                ]
+            }
+        },
+
+        {
             startDate: "2024-03",
             endDate: "2025-03",
             en: {
@@ -110,7 +134,7 @@ const Timeline: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
                 ]
             },
             fr: {
-                title: "P.h.D. Researcher in Mechanical Engineering", company: "University of Sherbrooke, Quebec",
+                title: "Doctoral Researcher in Mechanical Engineering", company: "University of Sherbrooke, Quebec",
                 projects: [
                     {
                         title: "Successfully automated large-scale simulations on **High-Performance Computing (HPC) clusters, optimized computational workflows by writing Bash scripts to manage job scheduling, data preprocessing, and result extraction",
@@ -179,53 +203,57 @@ const Timeline: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
     ];
 
     return (
-        <section className="py-5 bg-light" id="experience">
+        <section id="experience" className="py-5 bg-dark text-light">
             <div className="container">
-                <h2 className="text-center mb-5">
-                    {language === "en" ? "Job Experiences" : "Expériences Professionnelles"}
-                </h2>
-                <div className="row">
-                    <div className="col-md-9 mx-auto">
-                        <div className="border-start border-3 border-success position-relative">
-                            {timelineData.map((item, index) => (
-                                <div className="position-relative mb-4 ps-4" key={index}>
-                                    {/* Circle Indicator */}
-                                    <div
-                                        className="position-absolute top-0 start-0 translate-middle bg-success rounded-circle"
-                                        style={{ width: "15px", height: "15px", left: "-8px", top: "10px" }}
-                                    ></div>
+                <h2 className="text-center mb-5">Job Experience</h2>
+                <div className="timeline">
 
-                                    {/* Date */}
-                                    <h5 className="fw-bold">
-                                        {`${getMonthYear(item.startDate, language)} - ${getMonthYear(item.endDate, language)}`}
-                                    </h5>
+                    {timelineData.map((job, index) => (
+                        <div key={index} className="timeline-item">
+                            <div className="timeline-content">
+                                <h4 className="fw-bold">{job[language].title}</h4>
+                                <p className="text-muted">{job[language].company}</p>
 
-                                    {/* Job Title and Company */}
-                                    {item[language] && <h6 className="lead text-success">{item[language].title}</h6>}
-                                    {item[language] && <p className="lead fw-normal text-dark">{item[language].company}</p>}
-                                    {item[language]?.link && <p className="text-dark"><a className="text-success" href={item[language].link}>{item[language].link}</a></p>}
-                                    {/* Projects */}
-                                    <ul className="list-unstyled">
-                                        {item[language]?.projects &&
-                                            item[language].projects.map((project, idx) => (
-                                                <React.Fragment key={idx}>
-                                                    <li className="text-bold mt-3">{project.title}   {project.link && <a className="btn btn-success" href={project.link}>Google Docs</a>}</li>
+                                <p className="text-muted">
+                                    {getMonthYear(job.startDate, language)} –{" "}
+                                    {job.endDate === "Present"
+                                        ? (language === "fr" ? "Présent" : "Present")
+                                        : getMonthYear(job.endDate, language)}
+                                </p>
 
-                                                    {project.skills?.map((skill, skillIndex) => (
-                                                        <a className="badge mx-2 bg-dark text-decoration-none link-light" href="#!" key={skillIndex}>
+                                <ul>
+                                    {job[language].projects.map((project, i) => (
+                                        <li key={i}>
+                                            {project.link ? (
+                                                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                                    {project.title}
+                                                </a>
+                                            ) : (
+                                                project.title
+                                            )}
+                                            {project.skills && (
+                                                <div className="mb-2">
+                                                    {project.skills.map((skill, j) => (
+                                                        <span key={j} className="badge bg-primary me-1 mb-1">
                                                             {skill}
-                                                        </a>
+                                                        </span>
                                                     ))}
-                                                </React.Fragment>
-                                            ))}
-                                    </ul>
-                                </div>
-                            ))}
+                                                </div>
+                                            )}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                    ))}
+
+
+
+
                 </div>
             </div>
         </section>
+
     );
 };
 

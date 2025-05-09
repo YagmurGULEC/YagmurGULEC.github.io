@@ -1,11 +1,13 @@
+import { get } from "http";
 import React from "react";
 
 type TimelineProps = {
     language: "en" | "fr";
-    getMonthYear: (date: string, language: "en" | "fr") => string;
+    getMonthName: (date: string, language: "en" | "fr") => string;
+
 };
 
-const Education: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
+const Education: React.FC<TimelineProps> = ({ language, getMonthName }) => {
     type ContentType = {
         [key: string]: {
             university?: string;
@@ -60,10 +62,16 @@ const Education: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
 
                             <div className="col-3 fw-bold">{item[language].degree}</div>
                             <div className="col-3 text-muted">{item[language].university}</div>
-                            <div className="col-2">{`${getMonthYear(item.startDate as string, language)} - ${getMonthYear(item.endDate as string, language)}`}</div>
+                            <div className="col-2">
+                                {item.startDate && item.endDate ? (
+                                    `${getMonthName(item.startDate as string, language)} - ${getMonthName(item.endDate as string, language)}`
+                                ) : (
+                                    ""
+                                )}
+                            </div>
                             <div className="col-4">
                                 {item[language].skills?.map((skill, idx) => (
-                                    <span className="badge bg-dark me-1 text-white" key={idx}>{skill}</span>
+                                    <span className="badge bg-primary me-1 text-white" key={idx}>{skill}</span>
                                 ))}
                             </div>
                         </div>

@@ -12639,3 +12639,39 @@ html {
   background-repeat: no-repeat;
   min-height: 15rem;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background: linear-gradient(135deg, #343a40, #212529);
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.timeline h5 {
+  color: #212529;
+}
+
+.timeline ul {
+  padding-left: 1.2rem;
+}
+
+.timeline li {
+  margin-bottom: 0.5rem;
+}

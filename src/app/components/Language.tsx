@@ -27,7 +27,7 @@ const Language: React.FC<TimelineProps> = ({ language }) => {
     };
 
     return (
-        <section className="py-5" id="language">
+        <section className="py-5 bg-dark text-white" id="language">
             <h2 className="fw-bolder text-center">{language === "en" ? "Languages" : "Langues"}</h2>
             <div className="container text-center">
                 <div className="row justify-content-center">
@@ -36,8 +36,8 @@ const Language: React.FC<TimelineProps> = ({ language }) => {
                         .map(([lang, level], index) => (
                             <div key={index} className="col-md-4 my-2">
                                 <div className="border rounded p-3 bg-light">
-                                    <h5 className="fw-bold">{lang}</h5>
-                                    <span className="badge bg-dark">{level}</span>
+                                    <h5 className="fw-bold text-dark">{lang}</h5>
+                                    <span className="badge bg-primary">{level}</span>
                                 </div>
                             </div>
                         ))}

@@ -40,6 +40,11 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link fw-bold text-white" href="#contact">
+                                {language === "en" ? "Contact" : "Contact"}
+                            </Link>
+                        </li>
+                        <li className="nav-item">
                             <Link className="nav-link fw-bold text-white" href="#education">
                                 {language === "en" ? "Education" : "Formation"}
                             </Link>
@@ -49,11 +54,11 @@ export default function Navbar() {
                                 {language === "en" ? "Language" : "Langue"}
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link fw-bold text-white" href="/blog">
                                 {language === "en" ? "Blogs" : "Blogs"}
                             </Link>
-                        </li>
+                        </li> */}
 
                         {/* ✅ Language Switcher Dropdown */}
                         <li className="nav-item dropdown">

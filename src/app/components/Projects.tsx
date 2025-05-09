@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
+
 interface TimelineProps {
     language: 'en' | 'fr';
 }
@@ -20,6 +23,8 @@ interface ProjectContent {
 }
 
 const content: ProjectContent[] = [
+
+
 
     {
         github: "https://github.com/YagmurGULEC/NOAA_DataVisualization_Backend_Frontend",
@@ -58,84 +63,70 @@ const content: ProjectContent[] = [
 const Projects: React.FC<TimelineProps> = ({ language }) => {
 
     return (
-        <section className="py-5 bg-dark" id="projects">
-            <h2 className="fw-bolder text-center text-white">
-                {language === "en" ? "Projects" : "Projets"}
-            </h2>
-            <div className="container px-5">
-
-                <div className="row gx-5" >
-                    {content.map((item, index) => (
-                        <div className="col-lg-4 mb-5" key={index}>
-                            <div className="card h-100 shadow border-0">
-                                {item.image && (
-                                    <img className="card-img-top" src={item.image} alt="Project" />
-                                )}
-
-                                <div className="card-body p-4">
-                                    {item[language].technologies.map((tech, idx) => (
-                                        <div
-                                            key={idx}
-                                            className="mx-2 badge bg-dark bg-gradient rounded-pill mb-2"
-                                        >
-                                            {tech}
-                                        </div>
-                                    ))}
-
-                                    <a
-                                        className="text-decoration-none link-dark"
-                                        href={item.github} // Make sure the link is dynamic
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <div className="h5 card-title mb-3">{item[language].title}</div>
-                                    </a>
-                                    <p className="card-text mb-0">{item[language].description}</p>
-                                </div>
-                                <div className="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                    <div className="d-flex flex-wrap align-items-center gap-2">
-                                        <div className="d-flex align-items-center">
-                                            {/* Ensure the GitHub button properly redirects */}
-                                            <a
-                                                href={item.github}
-                                                className="btn btn-outline-dark custom-btn"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                GitHub
-                                            </a>
-                                            {item.youtube && (
-                                                <a
-                                                    href={item.youtube}
-                                                    className="btn btn-danger ms-2"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    YouTube
-                                                </a>
-                                            )}
-                                            {item.colab && (
-                                                <a
-                                                    href={item.colab}
-                                                    className="btn btn-success ms-2"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    Google Drive
-                                                </a>
-                                            )}
-                                        </div>
+        <section id="projects" className="py-5 bg-light">
+            <div className="container">
+                <h2 className="text-center mb-5">
+                    {language === "fr" ? "Projets" : "Projects"}
+                </h2>
+                <div className="row g-4">
+                    {content.map((project: ProjectContent, index) => (
+                        <div className="col-md-6 d-flex" key={index}>
+                            <div className="card h-100 d-flex flex-column shadow-sm w-100">
+                                <Image
+                                    src={`${project.image}`}
+                                    className="card-img-top"
+                                    alt={project.en.title}
+                                    width={600}
+                                    height={300}
+                                    style={{ objectFit: "cover" }}
+                                />
+                                <div className="card-body flex-grow-1">
+                                    <h5 className="card-title">{project[language].title}</h5>
+                                    <p className="card-text">{project[language].description}</p>
+                                    <div className="mb-2">
+                                        {project[language].technologies.map((tech: string, i: number) => (
+                                            <span key={i} className="badge bg-dark me-1 mb-1">
+                                                {tech}
+                                            </span>
+                                        ))}
                                     </div>
-
                                 </div>
-
-
+                                <div className="card-footer bg-white border-0">
+                                    {project.github && (
+                                        <a
+                                            href={project.github}
+                                            className="btn btn-sm btn-dark me-2"
+                                            target="_blank"
+                                        >
+                                            GitHub
+                                        </a>
+                                    )}
+                                    {project.youtube && (
+                                        <a
+                                            href={project.youtube}
+                                            className="btn btn-sm btn-danger me-2"
+                                            target="_blank"
+                                        >
+                                            YouTube
+                                        </a>
+                                    )}
+                                    {project.colab && (
+                                        <a
+                                            href={project.colab}
+                                            className="btn btn-sm btn-warning text-dark"
+                                            target="_blank"
+                                        >
+                                            Colab
+                                        </a>
+                                    )}
+                                </div>
                             </div>
-                        </div>))}
+                        </div>
+                    ))}
                 </div>
-
             </div>
         </section>
+
     );
 };
 
