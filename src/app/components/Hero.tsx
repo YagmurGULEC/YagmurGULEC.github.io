@@ -7,14 +7,14 @@ export default function Hero({ language }: { language: 'en' | 'fr' }) {
         en: {
             title: "Hello, I'm Yagmur",
             text: "Full Stack Development | Data Enthusiast",
-            subtext: "I am a software developer passionate about building applications that solve real-world problems. I specialize in Python, Flask, SQL, and deploying full-stack apps using Docker and AWS.",
-            cv: "/CV.pdf",
+            subtext: "Full-stack developer and data engineer with experience building cloud-native pipelines, containerized applications, and applied machine learning models. Skilled in AWS serverless architectures, Terraform, and computer vision (YOLO-based detection). Passionate about making complex technical topics accessible—regular contributor to Towards Data Science, where I publish tutorials on data engineering and ML workflows.",
+            cv: "/YagmurGulec_CV.pdf",
         },
         fr: {
-            title: "Bonjour, je suis Yagmur",
-            text: "Développement Full Stack | Passionnée de données",
-            subtext: "Je suis un développeur logiciel passionné par la création d'applications qui résolvent des problèmes concrets. Je me spécialise dans Python, Flask, SQL et le déploiement d'applications full-stack utilisant Docker et AWS.",
-            cv: "/CV.pdf",
+            title: "Hello, I'm Yagmur",
+            text: "Full Stack Development | Data Enthusiast",
+            subtext: "Full-stack developer and data engineer with experience building cloud-native pipelines, containerized applications, and applied machine learning models. Skilled in AWS serverless architectures, Terraform, and computer vision (YOLO-based detection). Passionate about making complex technical topics accessible—regular contributor to Towards Data Science, where I publish tutorials on data engineering and ML workflows.",
+            cv: "/YagmurGulec_CV.pdf",
         },
     }
     return (

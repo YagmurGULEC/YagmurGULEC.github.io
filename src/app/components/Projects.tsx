@@ -10,10 +10,12 @@ interface ProjectContent {
     github: string;
     youtube?: string;
     colab?: string;
+    website?: string;
     en: {
         title: string;
         description: string;
         technologies: string[];
+
     };
     fr: {
         title: string;
@@ -24,13 +26,28 @@ interface ProjectContent {
 
 const content: ProjectContent[] = [
 
-
+    {
+        github: "https://github.com/YagmurGULEC/aws-lambda-terraform",
+        website: "https://yagmurgulec.github.io/aws-lambda-terraform/",
+        image: "balanced_1.svg",
+        en: {
+            title: "Serverless Job Queue for SQL-Based Label Statistics and Dataset Partitioning",
+            description: "Designed and deployed a serverless data-processing pipeline for object detection dataset analytics (Pascal VOC). Use case: Balanced dataset generation for computer vision models.",
+            technologies: ["AWS Lambda", "AWS SQS", "Python", "Docker", "Terraform", "DynamoDB", "API Gateway", "AWS Athena", "AWS Glue"],
+        },
+        fr: {
+            title: "End-to-End Geospatial Climate Data Visualization with Spring Boot, PostgreSQL, and Deck.gl ",
+            description: "This project is a comprehensive end-to-end geospatial climate data visualization application. It utilizes Spring Boot for the backend to serve GeoJSON data, PostgreSQL for the database, and Deck.gl for the frontend visualization. The project is designed to handle large datasets efficiently and provides an interactive user interface for exploring climate data.",
+            technologies: ["Spring Boot", "TypeScript", "Deck.gl", "React", "PostgreSQL", "Docker"],
+        },
+    },
 
     {
         github: "https://github.com/YagmurGULEC/NOAA_DataVisualization_Backend_Frontend",
         youtube: "https://youtu.be/DXs0rniddUI",
         colab: "https://drive.google.com/drive/folders/1Cy7npgD27nL5gDY7abR0EjOsXw8w9OGN?usp=drive_link",
         image: "frontend.png",
+
         en: {
             title: "End-to-End Geospatial Climate Data Visualization with Spring Boot, PostgreSQL, and Deck.gl ",
             description: "This project is a comprehensive end-to-end geospatial climate data visualization application. It utilizes Spring Boot for the backend to serve GeoJSON data, PostgreSQL for the database, and Deck.gl for the frontend visualization. The project is designed to handle large datasets efficiently and provides an interactive user interface for exploring climate data.",
@@ -45,10 +62,12 @@ const content: ProjectContent[] = [
     {
         github: "https://github.com/YagmurGULEC/YagmurGULEC.github.io",
         image: "project1.png",
+        website: "https://yagmurgulec.github.io",
         en: {
             title: "Next.js Portfolio With Continuous Delivery using GitHub Actions",
             description: "This portfolio is built with Next.js and deployed with GitHub Pages. The deployment is automated with GitHub Actions.",
             technologies: ["Next.js", "Bootstrap", "GitHub Actions", "TypeScript"],
+
         },
         fr: {
             title: "Portfolio Next.js avec déploiement continu via GitHub Actions",
@@ -71,13 +90,13 @@ const Projects: React.FC<TimelineProps> = ({ language }) => {
                 <div className="row g-4">
                     {content.map((project: ProjectContent, index) => (
                         <div className="col-md-6 d-flex" key={index}>
-                            <div className="card h-100 d-flex flex-column shadow-sm w-100">
+                            <div className="card h-200 d-flex flex-column shadow-sm w-100">
                                 <Image
                                     src={`${project.image}`}
                                     className="card-img-top"
                                     alt={project.en.title}
-                                    width={600}
-                                    height={300}
+                                    width={1000}
+                                    height={800}
                                     style={{ objectFit: "cover" }}
                                 />
                                 <div className="card-body flex-grow-1">
@@ -117,6 +136,16 @@ const Projects: React.FC<TimelineProps> = ({ language }) => {
                                             target="_blank"
                                         >
                                             Colab
+                                        </a>
+                                    )}
+                                    {project.website && (
+                                        <a
+                                            href={project.website}
+                                            className="btn btn-sm btn-warning text-dark"
+                                            target="_blank"
+                                        >
+                                            Website
+
                                         </a>
                                     )}
                                 </div>

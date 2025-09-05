@@ -31,8 +31,8 @@ type TimelineProps = {
 const Timeline: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
     const timelineData: JobItem[] = [
         {
-            startDate: "2024-05",
-            endDate: "Present",
+            startDate: "2025-05",
+            endDate: "2025-07",
             en: {
                 title: "Machine Learning Developer Intern", company: "M2M",
 
@@ -48,7 +48,7 @@ const Timeline: React.FC<TimelineProps> = ({ language, getMonthYear }) => {
                 projects: [
                     {
                         title: "Implementing data augmentation techniques for a large-scale dataset of images to improve the performance of a deep learning model for Yolo Object Detection",
-                        skills: ["Python", "Deep Learning", "PyTorch", "Data Augmentation"],
+                        skills: ["Python", "Object Detection", "Image Processing", "Data Augmentation"],
                     },
                 ]
             }

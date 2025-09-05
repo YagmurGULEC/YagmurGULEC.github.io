@@ -66,12 +66,12 @@ export default function Home() {
   return (
     <>
       <Hero language={language as "en" | "fr"} />
+      <Contact language={language as "en" | "fr"} />
       <Projects language={language as "en" | "fr"} />
       <Publications language={language as "en" | "fr"} />
       <Timeline language={language as "en" | "fr"} getMonthYear={getMonthName} />
       <Education language={language as "en" | "fr"} getMonthName={getMonthName} />
       <Language language={language as "en" | "fr"} />
-      <Contact language={language as "en" | "fr"} />
 
     </>
   );

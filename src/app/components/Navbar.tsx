@@ -70,9 +70,9 @@ export default function Navbar() {
                                 <li>
                                     <a className="dropdown-item" onClick={() => setLanguage("en")}>English</a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a className="dropdown-item" onClick={() => setLanguage("fr")}>Français</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </li>
                     </ul>

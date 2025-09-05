@@ -14,6 +14,20 @@ const publications: Publication[] = [
         journal: "Towards Data Science",
         description: "An article exploring temporal dietary patterns using Modified Dynamic Time Warping and unsupervised clustering.",
     },
+    {
+        title: "End-to-End AWS RDS Setup with Bastion Host Using Terraform",
+        url: "https://towardsdatascience.com/end-to-end-aws-rds-setup-with-bastion-host-using-terraform/",
+        date: "Jul 28, 2025",
+        journal: "Towards Data Science",
+        description: "An article detailing the setup of AWS RDS with a Bastion host using Terraform.",
+    },
+    {
+        title: "How to Import Pre-Annotated Data into Label Studio and Run the Full Stack with Docker",
+        url: "https://towardsdatascience.com/how-to-import-pre-annotated-data-into-label-studio-and-run-the-full-stack-with-docker/",
+        date: "August 29, 2025",
+        journal: "Towards Data Science",
+        description: "An article detailing the process of importing pre-annotated data into Label Studio and running the full stack with Docker.",
+    },
     // Add more publications as needed
 ];
 
