@@ -2,7 +2,9 @@
 import { getAllPosts } from '../../lib/markdown';
 
 
-
+export function generateStaticParams() {
+    return [{ locale: 'en' }];
+}
 
 export default async function BlogPost({
     params,
